@@ -30,7 +30,7 @@ public class Personal {
         try{
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/persona","root","123456");
             PreparedStatement stmt = conn.prepareStatement("Insert into personas (nombre,apellido,edad,sexo,crup)Values(?,?,?,?,?)");
-            //le la posicion de la tabla
+            //lee la posicion de la tabla
             stmt.setString(1, nombre);
             stmt.setString(2,apellido);
             stmt.setInt(3, edad);
